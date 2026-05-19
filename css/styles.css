@@ -16,6 +16,10 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px; /* Compensa la altura del header fijo */
+}
 body {
     font-family: var(--font-body);
     background-color: var(--color-dark);
@@ -94,8 +98,9 @@ body {
     color: #fff;
 }
 .glow-effect:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(242, 156, 56, 0.4);
+    box-shadow: 0 0 25px rgba(242, 156, 56, 0.7);
+    filter: brightness(1.15);
+    transform: translateY(-2px);
 }
 .btn-secondary {
     background: transparent;
