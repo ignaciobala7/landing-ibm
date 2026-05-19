@@ -79,7 +79,7 @@ body {
     font-size: 0.95rem;
     transition: color var(--transition);
 }
-.main-nav a:hover { color: var(--color-accent); }
+.main-nav a:not(.btn):hover { color: var(--color-accent); }
 
 /* BOTONES */
 .btn {
