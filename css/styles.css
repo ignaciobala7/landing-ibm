@@ -18,7 +18,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 85px; /* Compensa la altura del header fijo */
+    scroll-padding-top: 120px; /* Compensa la altura del header fijo */
 }
 body {
     font-family: var(--font-body);
@@ -61,52 +61,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 85px;
+    height: 120px;
 }
 
-/* HORIZONTAL BRAND LOGO */
-.brand-horizontal {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    text-decoration: none;
-}
-.shield-crop {
-    width: 42px;
-    height: 52px; /* Oculta el texto original de la imagen que cae por debajo */
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-.shield-crop img {
-    width: 52px; /* Ajuste para que el escudo calce perfecto */
-    position: absolute;
-    top: 0;
+.logo-img {
+    height: 100px;
+    object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-}
-.brand-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.brand-title {
-    font-family: var(--font-heading);
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--color-white);
-    line-height: 1.1;
-    letter-spacing: 0.5px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-.brand-subtitle {
-    font-family: var(--font-heading);
-    font-size: 1.15rem;
-    font-weight: 400;
-    color: var(--color-white);
-    line-height: 1.1;
-    letter-spacing: 0.5px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .main-nav { display: flex; align-items: center; gap: 40px; }
