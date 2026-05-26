@@ -158,16 +158,17 @@ body {
 }
 .badge {
     display: inline-block;
-    padding: 8px 20px;
-    background: rgba(242, 172, 69, 0.2);
-    border: 1px solid var(--color-accent);
-    color: var(--color-primary);
+    padding: 10px 24px;
+    background: var(--color-accent); /* Dorado sólido, resalta al 100% */
+    border: none;
+    color: #1A1A1A; /* Texto oscuro para máximo contraste */
     border-radius: 30px;
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-size: 0.95rem;
+    font-weight: 800;
     margin-bottom: 24px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    box-shadow: 0 8px 25px rgba(242, 172, 69, 0.4); /* Sombra dorada que lo hace flotar */
 }
 .hero h1 {
     font-family: var(--font-heading);
@@ -233,32 +234,35 @@ body {
     gap: 30px;
 }
 
-/* LIGHT CARDS */
+/* LIGHT CARDS (Elegantes y Agradables a la vista) */
 .light-card {
-    background: #FFFFFF;
-    border: 1px solid rgba(90, 22, 20, 0.15); /* Borde sutil del color primario (Bordó) */
-    border-radius: 20px;
-    padding: 50px 30px;
+    background: #F8F9FA; /* Gris ultra claro para separarlo del fondo blanco */
+    border: 1px solid rgba(0, 0, 0, 0.12); /* Borde más visible y profesional */
+    border-radius: 20px; 
+    padding: 50px 30px; 
     text-align: center;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.06); /* Sombra más fuerte para que resalten */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* Sombra muy sutil */
     transition: all var(--transition);
 }
 .light-card:hover {
     transform: translateY(-8px);
+    background: #FFFFFF; /* Se ilumina a blanco puro al pasar el mouse */
     border-color: var(--color-accent);
-    box-shadow: 0 20px 40px rgba(90, 22, 20, 0.08);
+    box-shadow: 0 20px 40px rgba(90, 22, 20, 0.08); /* Sombra más amplia en hover */
 }
 .feature-icon {
     font-size: 3.5rem;
     margin-bottom: 25px;
+    color: var(--color-primary);
 }
 .light-card h3 {
     font-size: 1.35rem;
     margin-bottom: 15px;
     color: var(--color-primary);
+    font-weight: 700;
 }
 .light-card p {
-    color: #555;
+    color: #555; 
     line-height: 1.6;
 }
 
