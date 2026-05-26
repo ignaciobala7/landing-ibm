@@ -36,20 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollObserver.observe(el);
     });
 
-    // ==========================================
-    // 2. EFECTO DEL HEADER AL HACER SCROLL
-    // ==========================================
-    const header = document.querySelector('.main-header');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.background = 'rgba(26, 28, 25, 0.95)';
-            header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.5)';
-        } else {
-            header.style.background = 'rgba(26, 28, 25, 0.7)';
-            header.style.boxShadow = 'none';
-        }
-    });
+    // Efectos de scroll removidos a pedido de mantener el header estático.
 
     // ==========================================
     // 3. MENÚ MÓVIL (HAMBURGUESA)

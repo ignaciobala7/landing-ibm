@@ -2,6 +2,7 @@
 :root {
     /* Nueva Paleta de Colores IBM */
     --color-primary: #5A1614; /* Bordó */
+    --color-primary-dark: #3A0E0C; /* Bordó Oscuro para Hover */
     --color-accent: #F2AC45;  /* Dorado/Naranja */
     --color-bg-light: #FFFFFF; /* Blanco Puro */
     --color-bg-alt: #E9E8E7;   /* Gris Claro */
@@ -45,15 +46,13 @@ body {
     transform: translateY(0);
 }
 
-/* HEADER LIGHT GLASSMORPHISM */
+/* HEADER ESTÁTICO (Oscuro y Elegante) */
 .main-header {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    background: rgba(26, 28, 25, 0.98); /* Gris oscuro permanente */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
     transition: all var(--transition);
 }
 
@@ -72,13 +71,13 @@ body {
 .main-nav { display: flex; align-items: center; gap: 40px; }
 .main-nav ul { list-style: none; display: flex; gap: 35px; }
 .main-nav a {
-    color: var(--color-text-dark);
+    color: var(--color-text-light); /* Siempre blanco para contrastar con el fondo gris oscuro */
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
     transition: color var(--transition);
 }
-.main-nav a:not(.btn):hover { color: var(--color-primary); }
+.main-nav a:not(.btn):hover { color: var(--color-accent); }
 
 /* MOBILE MENU BTN */
 .mobile-menu-btn {
