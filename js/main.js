@@ -49,4 +49,34 @@ document.addEventListener('DOMContentLoaded', () => {
             mainNav.classList.toggle('active');
         });
     }
+
+    // ==========================================
+    // 4. SMOOTH SCROLL PARA BOTONES (Transición suave)
+    // ==========================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if(targetId === '#') return; // Ignorar si es solo #
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                
+                // Si el menú móvil está abierto, lo cerramos
+                if(mainNav && mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                }
+                
+                // Calculamos la posición considerando el alto del menú fijo
+                const headerHeight = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
 });

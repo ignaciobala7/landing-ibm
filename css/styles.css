@@ -145,8 +145,8 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    /* Fondo semi-transparente sin blur para mejorar drásticamente el rendimiento del scroll */
-    background: rgba(255, 255, 255, 0.7);
+    /* Hacemos un leve oscurecimiento para asegurar que se lea el texto, pero se ve la foto normal */
+    background: rgba(0, 0, 0, 0.35);
     z-index: 1;
 }
 .hero-content {
@@ -204,6 +204,268 @@ body {
     display: flex;
     gap: 20px;
     justify-content: center;
+    align-items: flex-start;
+}
+
+/* BOTÓN ESCUDO (LOGO IBM) */
+.btn-shield {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 14px 32px 30px 32px; /* Top padding matched to standard btn (14px) for perfect text alignment */
+    transition: all var(--transition);
+    /* Clip-path genera la forma del escudo en la base */
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+}
+.btn-shield:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-5px) scale(1.05);
+    color: white;
+}
+
+/* SECCIÓN HISTORIA */
+.history-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+.history-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
+}
+.history-content p {
+    margin-bottom: 20px;
+}
+.history-values {
+    list-style: none;
+    margin: 40px 0;
+    padding-left: 20px;
+    border-left: 5px solid var(--color-primary);
+}
+.history-values li {
+    margin-bottom: 15px;
+}
+.history-values strong {
+    color: var(--color-primary);
+}
+
+/* SECCIÓN ADN */
+.adn-section {
+    padding: 100px 0;
+    background-color: var(--color-bg-light);
+}
+.adn-subtitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+.adn-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 50px;
+}
+.adn-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 25px;
+}
+.adn-conclusion {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--color-accent);
+    margin-top: 40px;
+}
+.adn-conclusion h3 {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.adn-conclusion .highlight-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+.adn-verses {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.verse-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    position: relative;
+    transition: transform var(--transition);
+}
+.verse-card:hover {
+    transform: translateY(-5px);
+}
+.verse-card i {
+    color: var(--color-accent);
+    font-size: 2.5rem;
+    opacity: 0.15;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+.verse-card p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+.verse-card cite {
+    display: block;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: right;
+    font-size: 0.95rem;
+}
+}
+
+/* SECCIÓN PROGRAMAS */
+.programs-section {
+    padding: 100px 0;
+    background-color: #fff;
+}
+.program-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: stretch;
+    margin-top: 80px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+    overflow: hidden;
+}
+.reverse-card {
+    direction: rtl;
+}
+.reverse-card > * {
+    direction: ltr;
+}
+.program-content {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.program-badge {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 8px 16px;
+    background-color: rgba(139, 24, 24, 0.1);
+    color: var(--color-primary);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.program-content h3 {
+    font-size: 2.2rem;
+    color: #222;
+    margin-bottom: 15px;
+}
+.program-intro {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+.program-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+.program-features {
+    list-style: none;
+    margin: 20px 0 30px 0;
+    padding: 0;
+}
+.program-features li {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+.program-features i {
+    color: var(--color-accent);
+    margin-top: 5px;
+}
+.program-quote {
+    background-color: var(--color-bg-light);
+    padding: 25px 30px;
+    border-left: 5px solid var(--color-primary);
+    border-radius: 10px;
+    margin: 30px 0;
+}
+.program-quote p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: italic;
+    color: #333;
+}
+.program-highlight {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0 10px 20px rgba(139, 24, 24, 0.2);
+}
+.program-highlight p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    font-size: 1.15rem;
+}
+.program-highlight strong {
+    color: white;
+    font-size: 1.3rem;
+}
+.highlight-alt {
+    background-color: var(--color-accent);
+    box-shadow: 0 10px 20px rgba(224, 158, 54, 0.2);
+}
+.program-image {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+}
+.program-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* SECTION TITLES */
@@ -280,7 +542,7 @@ body {
     max-width: 900px;
     margin: 0 auto;
 }
-.video-wrapper iframe {
+.video-wrapper iframe, .video-wrapper video {
     position: absolute;
     top: 0;
     left: 0;
@@ -313,27 +575,22 @@ body {
     line-height: 1.7;
 }
 .split-image-collage {
-    position: relative;
-    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 .img-placeholder {
-    position: absolute;
+    position: relative;
+    width: 100%;
+    height: 350px;
     background: #FFF;
-    border: 1px dashed var(--color-accent);
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-primary);
-    font-weight: 600;
-    text-align: center;
-    padding: 20px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     background-size: cover;
     background-position: center;
 }
-.img-young { width: 70%; height: 350px; top: 0; left: 0; z-index: 2; background-image: url('../fotos%20IBM/DSC08120.jpg');}
-.img-old { width: 60%; height: 300px; bottom: 0; right: 0; z-index: 1; background-image: url('../fotos%20IBM/DSC08143.jpg');}
+.img-young { background-image: url('../fotos%20IBM/DSC08120.jpg');}
+.img-old { background-image: url('../fotos%20IBM/DSC08143.jpg');}
 
 /* SECTION: PLAN RESIDENCIAL */
 .residencia-section {
@@ -537,11 +794,35 @@ body {
     }
     .main-nav.active { right: 0; }
     .main-nav ul { display: flex; flex-direction: column; gap: 30px; text-align: center; margin-bottom: 30px; }
+    .contact-actions { flex-direction: column; }
+    .program-card, .reverse-card {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 0;
+    }
+    .program-image {
+        min-height: 350px;
+        order: -1;
+    }
+    .program-content {
+        padding: 40px 30px;
+    }
 }
 @media (max-width: 600px) {
     .hero h1 { font-size: 2.5rem; }
     .hero-actions { flex-direction: column; }
-    .split-image-collage { height: 350px; }
+    .split-text h2 { font-size: 2rem; }
+    .split-image-collage { 
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .split-image-collage .img-placeholder {
+        height: 250px;
+    }
+    .adn-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
     .contact-actions { flex-direction: column; }
     .residencia-gallery { grid-template-columns: 1fr; }
     .r-img-1 { height: 200px; }
