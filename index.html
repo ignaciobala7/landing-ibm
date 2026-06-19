@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- CSS y Favicon -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="Recursos/opt/favicon_real_logo.png">
+    <link rel="icon" type="image/png" href="Recursos/opt/favicon_tight_shield.png">
 </head>
 <body>
     <!-- HEADER (Light Glassmorphism) -->
@@ -39,45 +39,58 @@
 
     <main>
         <!-- HERO SECTION (CASONA BLUR) -->
-        <section class="hero">
+        <section class="hero" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;">
             <div class="hero-overlay"></div>
-            <div class="container hero-content">
-                <h1 class="fade-in-up delay-1" style="color: #fff; text-shadow: 0 4px 20px rgba(0,0,0,0.8);">Una familia con un mismo llamado, <br><span class="text-accent" style="text-shadow: 0 4px 20px rgba(0,0,0,0.8);">preparada para toda buena obra.</span></h1>
-                <p class="fade-in-up delay-2" style="color: #f0f0f0; text-shadow: 0 2px 10px rgba(0,0,0,0.8); font-weight: 500;">Educación teológica de excelencia en Córdoba, Argentina. Prepárate para el ministerio presencial o a través de nuestra modalidad virtual PIET.</p>
-                <div class="hero-actions fade-in-up delay-3">
-                    <a href="#historia" class="btn-shield">Conoce el IBM</a>
-                    <a href="#programas" class="btn btn-secondary">Explorar Programas</a>
-                </div>
+            <div class="container hero-content" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                <h1 class="fade-in-up delay-1" style="color: #F2AC45; text-shadow: 2px 2px 10px rgba(0,0,0,0.9), -2px -2px 10px rgba(0,0,0,0.9); font-size: 3.5rem; max-width: 900px; margin: 0 auto; margin-bottom: 20px;">Una familia con un mismo llamado, <br>preparada para toda buena obra.</h1>
+                <img src="Recursos/IBM Logo Fondo Claro.png" alt="IBM Logo" class="hero-logo-bottom fade-in-up delay-2" style="max-height: 70px; margin-top: 30px; filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.6)); margin-bottom: 40px;">
+                
+                <a href="#historia" class="btn btn-primary fade-in-up delay-3" style="font-size: 1.1rem; padding: 15px 40px; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); border-radius: 30px;">CONÓCENOS: Nuestra historia</a>
             </div>
         </section>
 
         <!-- SECCIÓN: NUESTRA HISTORIA -->
         <section id="historia" class="history-section">
             <div class="container">
-                <div class="section-title">
-                    <h2>Nuestra <span class="text-accent">Historia</span></h2>
-                    <p>Hace 37 años comenzó una historia que sigue escribiéndose.</p>
-                </div>
-                <div class="history-content">
-                    <p>Una historia nacida del deseo de formar hombres y mujeres profundamente enamorados de Jesús, comprometidos con Su Palabra y disponibles para Su misión.</p>
-                    <p>Desde 1990, el Instituto Bíblico Mediterráneo encontró su hogar en Coronel Olmedo. Lo que comenzó como una visión sembrada en un lugar concreto pronto empezó a extenderse mucho más allá de sus fronteras. Generaciones de estudiantes llegaron desde distintos rincones de la Argentina: desde grandes ciudades y pequeños pueblos, desde el norte y el centro del país, hasta el extremo sur, el fin del mundo. Personas distintas, historias distintas, pero una misma convicción: conocer más a Cristo para servir mejor.</p>
-                    <p>Con el paso de los años, esa comunidad creció. La modalidad virtual abrió nuevas puertas y permitió que el aula trascendiera el edificio para convertirse en una experiencia compartida entre estudiantes conectados desde diferentes latitudes, aprendiendo juntos, orando juntos y siendo transformados juntos.</p>
-                    <p>Porque nunca se trató solamente de estudiar teología. Se trató de descubrir que la verdad del evangelio transforma la vida, la iglesia y el mundo.</p>
-                    <p>Por eso, nuestra historia se sostiene sobre valores que han marcado cada generación:</p>
-                    <ul class="history-values">
-                        <li><strong>Enseñanza bíblica relevante</strong>, porque creemos que la Palabra de Dios sigue teniendo respuestas vivas para el presente.</li>
-                        <li><strong>Intimidad con Dios</strong>, porque el conocimiento sin comunión pierde su propósito.</li>
-                        <li><strong>Carácter excepcional</strong>, porque el ministerio se sostiene más por quiénes somos que por lo que hacemos.</li>
-                        <li><strong>Experiencia pentecostal</strong>, porque creemos en la obra actual del Espíritu Santo que capacita, renueva y envía.</li>
-                        <li><strong>Comunidad auténtica</strong>, porque nadie fue llamado a caminar solo.</li>
-                        <li><strong>Servicio extraordinario</strong>, porque toda formación verdadera desemboca en amar y servir a otros.</li>
-                    </ul>
-                    <p>Y hoy comenzamos una nueva etapa.</p>
-                    <p>En 2026 reestructuramos nuestra propuesta para responder a una nueva generación de discípulos y líderes.</p>
-                    <p>Te invitamos a invertir un año de tu vida para algo que puede transformar toda tu historia. Un año para aprender teología con profundidad. Un año para ponerla en práctica plantando una iglesia. Un año para descubrir tu vocación. Un año para afirmar tu llamado. Un año para desarrollar tu ministerio.</p>
-                    <p>No te ofrecemos solamente una carrera. Te invitamos a vivir una experiencia que forme tu mente, encienda tu corazón y active tus manos para la misión.</p>
-                    <p>Tu próximo año puede ser uno más. O puede ser el año que marque el comienzo de todo lo que Dios quiere hacer a través de vos.</p>
-                    <p><strong>Te esperamos en el Instituto Bíblico Mediterráneo.</strong></p>
+                <div class="history-grid">
+                    <div class="history-image-col fade-in-left">
+                        <img src="Recursos/opt/historia_img_v2.jpg" alt="Comunidad IBM" class="history-main-img">
+                    </div>
+                    <div class="history-text-col fade-in-right">
+                        <h2>¡Bienvenidos al Instituto Bíblico Mediterráneo!</h2>
+                        
+                        <h3>Quiénes Somos</h3>
+                        <p>Hace 37 años nació un sueño que hoy se sigue escribiendo: formar líderes apasionados por Jesús, comprometidos con su Palabra y listos para la misión. Desde nuestra casa en Coronel Olmedo hasta cada rincón del mundo a través de la modalidad virtual, nos unimos en un mismo sentir: aprender, orar y ser transformados juntos.</p>
+                        
+                        <h3>Nuestra Misión</h3>
+                        <p>Guiar a las personas llamadas por Dios para maximizar su efectividad en el ministerio. (Jn. 15:1-11)</p>
+                        
+                        <h3>Nuestra Visión</h3>
+                        <p>Crear ambientes donde todos sean equipados e inspirados a buscar la intimidad con el Señor, crecer en su fe y alcanzar a su generación. (Heb. 6:1; Rom. 12:2)</p>
+                        
+                        <h3>Valores que nos Definen</h3>
+                        <ul class="history-values-list">
+                            <li><strong>Intimidad con Dios:</strong> El saber no tiene sentido sin una comunión diaria y real. (Jn. 17:3)</li>
+                            <li><strong>Experiencia Pentecostal:</strong> Creemos en la obra actual y la llenura del Espíritu Santo para el ministerio. (Hechos 1:8)</li>
+                            <li><strong>Enseñanza Bíblica Relevante:</strong> Respuestas vivas y prácticas para los desafíos de hoy. (2 Tim. 3:16-17)</li>
+                            <li><strong>Carácter Excepcional:</strong> Nuestra integridad siempre nos va a llevar más lejos que nuestra capacidad. (Fil. 4:8-9)</li>
+                            <li><strong>Comunidad Auténtica:</strong> Relaciones genuinas en un contexto de convivencia intencional. (Sal. 133:1)</li>
+                            <li><strong>Servicio Extraordinario:</strong> El ejemplo de Jesús nos impulsa a amar de forma práctica al prójimo. (Jn. 13:12-16)</li>
+                            <li><strong>Influencia Estratégica:</strong> Tu llamado te ubica en el lugar justo dentro del plan de Dios. (Jer. 29:11)</li>
+                        </ul>
+                        
+                        <h3>2026: Una Nueva Etapa</h3>
+                        <p>Reestructuramos nuestra propuesta educativa para acompañar a una nueva generación de discípulos. Te invitamos a dedicar un año de tu vida a algo que va a cambiar tu historia para siempre.</p>
+                        <p>Un año para:</p>
+                        <ol class="history-numbered-list">
+                            <li>Profundizar en las Escrituras.</li>
+                            <li>Poner la fe en práctica plantando una iglesia.</li>
+                            <li>Descubrir tu vocación y afirmar tu llamado.</li>
+                        </ol>
+                        <p>No te ofrecemos solo una carrera, sino una experiencia integral para transformar tu mente, encender tu corazón y activar tus manos para la misión. Te esperamos.</p>
+                        
+                        <a href="#programas" class="btn btn-primary" style="margin-top: 20px;">CONECTAR CON NUESTROS PROGRAMAS</a>
+                    </div>
                 </div>
             </div>
         </section>
