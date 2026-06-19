@@ -855,6 +855,81 @@ body {
 .contact-section p { font-size: 1.15rem; color: #555; max-width: 600px; margin: 0 auto 40px auto; }
 .contact-actions { display: flex; gap: 20px; justify-content: center; }
 
+/* PROGRAM CUSTOM TITLES */
+.title-profundo-pre {
+    display: block;
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    color: #ff4d6d;
+    margin-bottom: 5px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.title-profundo {
+    color: #ff4d6d;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    line-height: 1;
+    font-family: 'Inter', sans-serif;
+}
+
+.title-sabados-pre {
+    display: block;
+    font-family: 'Dancing Script', cursive;
+    color: #c979ff;
+    font-size: 2.2rem;
+    margin-bottom: -15px;
+    font-weight: 600;
+    transform: rotate(-2deg);
+}
+.title-sabados {
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 1px #d463ff;
+    text-shadow: 0 0 10px #d463ff, 0 0 20px #d463ff, 0 0 30px #d463ff, 0 0 40px #d463ff;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.title-formacion {
+    display: inline-block;
+    background-color: #17c385;
+    color: #000;
+    padding: 10px 25px;
+    font-weight: 900;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.title-bachiller {
+    font-family: 'Dancing Script', cursive;
+    color: #222;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+.title-bachiller-sub {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
 /* FOOTER */
 .main-footer {
     text-align: center;
