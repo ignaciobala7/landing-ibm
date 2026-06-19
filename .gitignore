@@ -1,3 +1,5 @@
 Recursos/videos/*.mp4
 Recursos/videos/*.avi
 Recursos/videos/*.mov
+!Recursos/videos/IBM_Comprimido.mp4
+!Recursos/Videos/IBM_Comprimido.mp4
