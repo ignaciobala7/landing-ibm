@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Configuramos el observador
     const observerOptions = {
         root: null, // usa el viewport del navegador
-        rootMargin: '0px',
-        threshold: 0.15 // Se activa cuando el 15% del elemento es visible
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.01 // Se activa cuando el 1% del elemento es visible (soluciona error en mobile con secciones largas)
     };
     
     const scrollObserver = new IntersectionObserver((entries, observer) => {
