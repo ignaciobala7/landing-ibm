@@ -928,20 +928,34 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* RESPONSIVE */
+/* ============================================
+   RESPONSIVE — TABLET (≤900px)
+   ============================================ */
 @media (max-width: 900px) {
+
+    /* --- Layouts --- */
     .split-layout, .residencia-grid { grid-template-columns: 1fr; }
 
-    /* Hero mobile: ambos textos juntos abajo, casona libre arriba */
+    /* --- Paddings de sección --- */
+    .history-section, .programs-section, .features,
+    .contact-section { padding: 70px 0; }
+    .family-section, .residencia-section,
+    .heart-section, .testimonials-section { padding: 80px 0; }
+    .section-title { margin-bottom: 48px; }
+    .section-title h2 { font-size: 2.2rem; }
+
+    /* --- Hero: ambos paneles al fondo, casona libre arriba --- */
     .hero {
         min-height: 100svh;
+        padding-top: 0;
+        align-items: flex-end;
     }
     .hero-overlay {
         background: linear-gradient(
             to bottom,
             rgba(0,0,0,0)    0%,
-            rgba(0,0,0,0)    45%,
-            rgba(0,0,0,0.55) 68%,
+            rgba(0,0,0,0)    42%,
+            rgba(0,0,0,0.5)  65%,
             rgba(0,0,0,0.82) 100%
         );
     }
@@ -949,33 +963,37 @@ body {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-end;
-        min-height: 100svh;
-        padding: 0 20px 50px;
-        gap: 0;
+        padding: 0 20px 48px;
+        gap: 12px;
     }
     .hero-left {
         text-align: left;
         max-width: 48%;
-        border-left: 4px solid var(--color-accent);
+        border-left: 3px solid var(--color-accent);
         border-bottom: none;
-        padding-left: 14px;
+        padding-left: 12px;
         padding-bottom: 0;
     }
     .hero-right {
         text-align: right;
         align-items: flex-end;
         max-width: 48%;
-        border-right: 4px solid var(--color-accent);
-        padding-right: 14px;
+        border-right: 3px solid var(--color-accent);
+        padding-right: 12px;
+        gap: 16px;
     }
-    .hero h1 { font-size: 1.9rem; }
+    .hero h1 { font-size: 1.9rem; letter-spacing: -0.5px; }
+    .hero .hero-eyebrow { font-size: 0.72rem; letter-spacing: 2px; margin-bottom: 8px; }
+    .hero .hero-tagline { font-size: 1.1rem; }
+    .hero-shield { width: 44px; margin-bottom: 10px; }
+    .hero-cta { padding: 10px 26px; font-size: 0.85rem; letter-spacing: 1px; }
 
-    /* Nav mobile */
+    /* --- Nav mobile --- */
     .mobile-menu-btn { display: flex; }
     .main-nav {
         position: fixed; top: 0; right: -100%;
         width: 300px; height: 100vh;
-        background: rgba(255, 255, 255, 0.98);
+        background: rgba(255,255,255,0.98);
         backdrop-filter: blur(15px);
         flex-direction: column;
         justify-content: center;
@@ -986,8 +1004,15 @@ body {
     .main-nav.active { right: 0; }
     .main-nav ul { display: flex; flex-direction: column; gap: 30px; text-align: center; margin-bottom: 30px; }
 
-    /* Programas mobile */
-    .contact-actions { flex-direction: column; }
+    /* --- Tipografía general --- */
+    .history-text-col h2 { font-size: 1.9rem; }
+    .split-text h2 { font-size: 2.2rem; }
+    .heart-content h2 { font-size: 2.2rem; }
+    .residencia-text h2 { font-size: 2.2rem; }
+    .contact-section h2 { font-size: 2rem; }
+
+    /* --- Programas --- */
+    .contact-actions { flex-direction: column; align-items: center; }
     .program-card, .reverse-card {
         grid-template-columns: 1fr;
         direction: ltr;
@@ -1006,58 +1031,87 @@ body {
         object-fit: cover;
         object-position: center 20%;
     }
-    .program-content {
-        padding: 36px 24px;
-    }
+    .program-content { padding: 36px 28px; }
+    .program-content h3 { font-size: 1.8rem; }
+    .title-profundo  { font-size: 2rem; }
+    .title-sabados   { font-size: 2.2rem; }
+    .title-bachiller { font-size: 2.2rem; }
+    .title-formacion { font-size: 1.7rem; }
 }
 
+/* ============================================
+   RESPONSIVE — MOBILE (≤600px)
+   ============================================ */
 @media (max-width: 600px) {
-    /* Hero */
-    .hero h1 { font-size: 1.9rem; }
-    .hero-left, .hero-right { max-width: 88%; }
-    .hero .hero-tagline { font-size: 1.1rem; }
-    .hero-actions { flex-direction: column; }
-    .hero-shield { width: 46px; }
 
-    /* Header logo */
+    /* --- Paddings de sección --- */
+    .history-section, .programs-section, .features,
+    .contact-section { padding: 50px 0; }
+    .family-section, .residencia-section,
+    .heart-section, .testimonials-section { padding: 56px 0; }
+    .section-title { margin-bottom: 32px; }
+    .section-title h2 { font-size: 1.8rem; }
+
+    /* --- Header --- */
     .logo-img { height: 60px; }
 
-    /* Secciones */
-    .split-text h2 { font-size: 2rem; }
-    .contact-actions { flex-direction: column; }
+    /* --- Hero --- */
+    .hero h1 { font-size: 1.55rem; }
+    .hero .hero-eyebrow { font-size: 0.62rem; letter-spacing: 1.5px; }
+    .hero .hero-tagline { font-size: 0.92rem; line-height: 1.45; }
+    .hero-shield { width: 38px; }
+    .hero-cta { padding: 9px 20px; font-size: 0.78rem; }
+    .hero-actions { flex-direction: column; }
 
-    /* Familia: imágenes apiladas */
-    .split-image-collage {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    .split-image-collage .img-placeholder {
-        height: 220px;
-        border-radius: 15px;
-    }
+    /* --- Tipografía general --- */
+    .history-text-col h2 { font-size: 1.6rem; }
+    .history-text-col h3 { font-size: 1.15rem; }
+    .history-text-col p, .history-values-list li { font-size: 0.97rem; }
+    .split-text h2 { font-size: 1.8rem; }
+    .heart-content h2 { font-size: 1.8rem; }
+    .residencia-text h2 { font-size: 1.8rem; }
+    .contact-section h2 { font-size: 1.7rem; }
+    .contact-section p { font-size: 1rem; }
 
-    /* Residencia */
-    .residencia-gallery { grid-template-columns: 1fr; }
-    .residencia-img { height: 200px; }
-    .r-img-1 { height: 220px; }
-
-    /* Programas */
+    /* --- Programas --- */
     .program-image { aspect-ratio: 4 / 3; }
-    .program-content { padding: 28px 20px; }
+    .program-content { padding: 28px 18px; }
+    .program-content h3 { font-size: 1.5rem; }
+    .title-profundo  { font-size: 1.6rem; }
+    .title-sabados   { font-size: 1.8rem; }
+    .title-sabados-pre { font-size: 1.6rem; }
+    .title-bachiller { font-size: 1.9rem; }
+    .title-formacion { font-size: 1.35rem; }
+    .program-intro { font-size: 1.05rem; }
+    .program-content p { font-size: 1rem; }
+    .program-highlight p { font-size: 1rem; }
 
-    /* Equipo: avatares más chicos */
-    .avatar {
-        width: 130px;
-        height: 130px;
-    }
-    .team-grid {
-        gap: 24px;
-    }
+    /* --- Familia --- */
+    .split-image-collage { grid-template-columns: 1fr; gap: 14px; }
+    .split-image-collage .img-placeholder { height: 210px; border-radius: 14px; }
 
-    /* Testimonios */
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
+    /* --- Residencia --- */
+    .residencia-gallery { grid-template-columns: 1fr; }
+    .residencia-img { height: 190px; }
+    .r-img-1 { height: 210px; }
+
+    /* --- Equipo --- */
+    .team-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .team-member { padding: 22px 14px; }
+    .avatar { width: 100px; height: 100px; }
+    .team-member h4 { font-size: 1rem; }
+    .team-member span { font-size: 0.82rem; }
+
+    /* --- Testimonios --- */
+    .features-grid { grid-template-columns: 1fr; }
+
+    /* --- Contacto --- */
+    .contact-actions { flex-direction: column; align-items: center; }
+    .contact-actions .btn { width: 100%; max-width: 300px; text-align: center; }
+
+    /* --- WhatsApp --- */
+    .whatsapp-float { bottom: 18px; right: 18px; width: 50px; height: 50px; }
+    .whatsapp-float svg { width: 26px; height: 26px; }
 }
 
 /* WHATSAPP FLOTANTE */
