@@ -973,6 +973,8 @@ body {
         border-bottom: none;
         padding-left: 12px;
         padding-bottom: 0;
+        align-self: flex-end;
+        margin-bottom: 36px;
     }
     .hero-right {
         text-align: right;
@@ -981,6 +983,7 @@ body {
         border-right: 3px solid var(--color-accent);
         padding-right: 12px;
         gap: 16px;
+        align-self: flex-end;
     }
     .hero h1 { font-size: 1.9rem; letter-spacing: -0.5px; }
     .hero .hero-eyebrow { font-size: 0.72rem; letter-spacing: 2px; margin-bottom: 8px; }
@@ -1062,6 +1065,7 @@ body {
     .hero-shield { width: 38px; }
     .hero-cta { padding: 9px 20px; font-size: 0.78rem; }
     .hero-actions { flex-direction: column; }
+    .hero-left { margin-bottom: 28px; }
 
     /* --- Tipografía general --- */
     .history-text-col h2 { font-size: 1.6rem; }
