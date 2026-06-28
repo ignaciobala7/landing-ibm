@@ -999,6 +999,14 @@ body {
         position: static;
         aspect-ratio: 4 / 3;
         order: -1;
+        width: 100%;
+        overflow: hidden;
+    }
+    .program-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
     }
     .program-content {
         padding: 36px 24px;
@@ -1006,23 +1014,52 @@ body {
 }
 
 @media (max-width: 600px) {
+    /* Hero */
     .hero h1 { font-size: 1.9rem; }
     .hero-left, .hero-right { max-width: 88%; }
     .hero .hero-tagline { font-size: 1.1rem; }
     .hero-actions { flex-direction: column; }
+    .hero-shield { width: 46px; }
+
+    /* Header logo */
+    .logo-img { height: 60px; }
+
+    /* Secciones */
     .split-text h2 { font-size: 2rem; }
+    .contact-actions { flex-direction: column; }
+
+    /* Familia: imágenes apiladas */
     .split-image-collage {
         grid-template-columns: 1fr;
         gap: 15px;
     }
     .split-image-collage .img-placeholder {
-        height: 250px;
+        height: 220px;
+        border-radius: 15px;
     }
-    .contact-actions { flex-direction: column; }
+
+    /* Residencia */
     .residencia-gallery { grid-template-columns: 1fr; }
-    .r-img-1 { height: 200px; }
+    .residencia-img { height: 200px; }
+    .r-img-1 { height: 220px; }
+
+    /* Programas */
     .program-image { aspect-ratio: 3 / 2; }
-    .hero-shield { width: 46px; }
+    .program-content { padding: 28px 20px; }
+
+    /* Equipo: avatares más chicos */
+    .avatar {
+        width: 130px;
+        height: 130px;
+    }
+    .team-grid {
+        gap: 24px;
+    }
+
+    /* Testimonios */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* WHATSAPP FLOTANTE */
