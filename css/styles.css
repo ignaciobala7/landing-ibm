@@ -932,45 +932,43 @@ body {
 @media (max-width: 900px) {
     .split-layout, .residencia-grid { grid-template-columns: 1fr; }
 
-    /* Hero mobile: mismo espíritu que desktop */
+    /* Hero mobile: ambos textos juntos abajo, casona libre arriba */
     .hero {
         min-height: 100svh;
     }
     .hero-overlay {
         background: linear-gradient(
             to bottom,
-            rgba(0,0,0,0.84) 0%,
-            rgba(0,0,0,0.3)  26%,
-            rgba(0,0,0,0.05) 44%,
-            rgba(0,0,0,0.05) 56%,
-            rgba(0,0,0,0.3)  74%,
-            rgba(0,0,0,0.84) 100%
+            rgba(0,0,0,0)    0%,
+            rgba(0,0,0,0)    45%,
+            rgba(0,0,0,0.55) 68%,
+            rgba(0,0,0,0.82) 100%
         );
     }
     .hero-content {
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
+        align-items: flex-end;
         min-height: 100svh;
-        padding: 110px 28px 60px;
+        padding: 0 20px 50px;
         gap: 0;
     }
     .hero-left {
         text-align: left;
-        max-width: 75%;
+        max-width: 48%;
         border-left: 4px solid var(--color-accent);
         border-bottom: none;
-        padding-left: 18px;
+        padding-left: 14px;
         padding-bottom: 0;
     }
     .hero-right {
         text-align: right;
         align-items: flex-end;
-        max-width: 75%;
-        align-self: flex-end;
+        max-width: 48%;
         border-right: 4px solid var(--color-accent);
-        padding-right: 18px;
+        padding-right: 14px;
     }
-    .hero h1 { font-size: 2.2rem; }
+    .hero h1 { font-size: 1.9rem; }
 
     /* Nav mobile */
     .mobile-menu-btn { display: flex; }
@@ -997,7 +995,7 @@ body {
     }
     .program-image {
         position: static;
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 3 / 2;
         order: -1;
         width: 100%;
         overflow: hidden;
@@ -1006,7 +1004,7 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center top;
+        object-position: center 20%;
     }
     .program-content {
         padding: 36px 24px;
@@ -1044,7 +1042,7 @@ body {
     .r-img-1 { height: 220px; }
 
     /* Programas */
-    .program-image { aspect-ratio: 3 / 2; }
+    .program-image { aspect-ratio: 4 / 3; }
     .program-content { padding: 28px 20px; }
 
     /* Equipo: avatares más chicos */
