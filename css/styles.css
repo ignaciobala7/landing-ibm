@@ -359,8 +359,7 @@ body {
     }
 }
 .history-image-col {
-    position: sticky;
-    top: 100px;
+    align-self: start;
 }
 .history-main-img {
     width: 100%;
