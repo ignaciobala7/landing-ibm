@@ -51,32 +51,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 4. SMOOTH SCROLL PARA BOTONES (Transición suave)
+    // 4. NAVEGACIÓN CON TRANSICIÓN DE PÁGINA
     // ==========================================
+    const transitionOverlay = document.getElementById('page-transition');
+
+    function navigateTo(targetId) {
+        const targetElement = document.querySelector(targetId);
+        if (!targetElement || !transitionOverlay) return;
+
+        // Cierra el menú móvil si está abierto
+        if (mainNav && mainNav.classList.contains('active')) {
+            mainNav.classList.remove('active');
+        }
+
+        // 1. Fade IN del overlay (cubre la pantalla)
+        transitionOverlay.classList.add('fade-in');
+
+        setTimeout(() => {
+            // 2. Scroll instantáneo a la sección destino
+            const headerHeight = 80;
+            const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            window.scrollTo({ top: offsetPosition, behavior: 'instant' });
+
+            // 3. Fade OUT del overlay (revela la nueva sección)
+            setTimeout(() => {
+                transitionOverlay.classList.remove('fade-in');
+            }, 60);
+        }, 340);
+    }
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            if(targetId === '#') return; // Ignorar si es solo #
-            
+            if (!targetId || targetId === '#') return;
             const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                e.preventDefault();
-                
-                // Si el menú móvil está abierto, lo cerramos
-                if(mainNav && mainNav.classList.contains('active')) {
-                    mainNav.classList.remove('active');
-                }
-                
-                // Calculamos la posición considerando el alto del menú fijo
-                const headerHeight = 80;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+            if (!targetElement) return;
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-            }
+            e.preventDefault();
+            navigateTo(targetId);
         });
     });
 });

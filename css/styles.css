@@ -1108,6 +1108,27 @@ body {
 }
 
 /* ============================================
+   TRANSICIÓN DE SECCIÓN (overlay al navegar)
+   ============================================ */
+.page-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: var(--color-primary);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-transition.fade-in {
+    opacity: 1;
+    pointer-events: all;
+}
+.page-transition.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ============================================
    PROGRAM LOGO (PNG assets)
    ============================================ */
 .program-logo {
