@@ -534,11 +534,15 @@ body {
     width: 100%;
     position: sticky;
     top: 110px;
-    aspect-ratio: 4 / 5;
+    align-self: stretch;
+    min-height: 420px;
     overflow: hidden;
+    border-radius: 18px;
 }
 .program-image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     height: 100%;
     object-fit: cover;
     object-position: center;
