@@ -1118,6 +1118,103 @@ body {
     .whatsapp-float svg { width: 26px; height: 26px; }
 }
 
+/* ============================================
+   PROGRAM LOGO (PNG assets)
+   ============================================ */
+.program-logo {
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 12px;
+}
+.program-modality {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 18px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ============================================
+   PROGRAM VIDEO PLACEHOLDER
+   ============================================ */
+.program-video-embed {
+    margin-top: 28px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.program-video-embed iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+}
+.video-coming-soon {
+    aspect-ratio: 16 / 9;
+    background: #1a1a1a;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.35);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ============================================
+   TESTIMONIOS — GRILLA DE VIDEOS
+   ============================================ */
+.testimonios-video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+.testimonio-video-card {
+    background: #f8f9fa;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonio-video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+.testimonio-video-card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+}
+.testimonio-video-card .video-coming-soon {
+    border-radius: 0;
+}
+.testimonio-video-info {
+    padding: 16px 20px 20px;
+}
+.testimonio-video-info h4 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+.testimonio-video-info span {
+    font-size: 0.83rem;
+    color: #777;
+}
+@media (max-width: 600px) {
+    .testimonios-video-grid { grid-template-columns: 1fr; gap: 20px; }
+    .program-logo { max-width: 200px; }
+}
+
 /* WHATSAPP FLOTANTE */
 .whatsapp-float {
     position: fixed;
