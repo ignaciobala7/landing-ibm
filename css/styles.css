@@ -1132,6 +1132,23 @@ body {
 /* ============================================
    PROGRAM VIDEO PLACEHOLDER
    ============================================ */
+/* Video full-width debajo del card (span de las 2 columnas) */
+.program-video-full {
+    grid-column: 1 / -1;
+    overflow: hidden;
+    border-top: 1px solid rgba(0,0,0,0.06);
+}
+.program-video-full iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+.program-video-full .video-coming-soon {
+    border-radius: 0;
+    aspect-ratio: 16 / 5;
+}
+
 .program-video-embed {
     margin-top: 28px;
     border-radius: 12px;
