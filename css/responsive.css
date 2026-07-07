@@ -107,9 +107,11 @@
         order: -1;
     }
     .reverse-card .program-image { order: -1; }
-    .program-collage {
-        min-height: 280px;
-        order: -1;
+    .program-collage-strip {
+        grid-template-columns: 1fr 1fr;
+    }
+    .cs-cell--hide-mobile {
+        display: none;
     }
     .program-content { padding: 36px 28px; }
     .program-content h3 { font-size: 1.8rem; }
@@ -158,7 +160,15 @@
 
     /* --- Programas --- */
     .program-image { min-height: 240px; }
-    .program-collage { min-height: 200px; }
+    .program-collage-strip {
+        grid-template-columns: 1fr;
+    }
+    .cs-cell:not(.cs-cell--main) {
+        display: none;
+    }
+    .cs-cell--main {
+        aspect-ratio: 16 / 9;
+    }
     .fc-staff-row { gap: 6px; margin: 14px 0 20px 0; }
     .fc-staff-member { padding: 5px 10px 5px 5px; min-width: 120px; }
     .fc-avatar { width: 32px; height: 32px; }
