@@ -107,12 +107,19 @@
         order: -1;
     }
     .reverse-card .program-image { order: -1; }
+    .program-collage {
+        grid-template-columns: 1fr 1fr;
+        min-height: 280px;
+        order: -1;
+    }
     .program-content { padding: 36px 28px; }
     .program-content h3 { font-size: 1.8rem; }
     .title-profundo  { font-size: 2rem; }
     .title-sabados   { font-size: 2.2rem; }
     .title-bachiller { font-size: 2.2rem; }
     .title-formacion { font-size: 1.7rem; }
+    .fc-staff-row { gap: 8px; }
+    .fc-staff-member { min-width: 130px; }
 }
 
 /* ============================================
@@ -152,6 +159,10 @@
 
     /* --- Programas --- */
     .program-image { min-height: 240px; }
+    .program-collage { min-height: 220px; }
+    .fc-staff-row { gap: 6px; margin: 14px 0 20px 0; }
+    .fc-staff-member { padding: 5px 10px 5px 5px; min-width: 120px; }
+    .fc-avatar { width: 32px; height: 32px; }
     .program-content { padding: 28px 18px; }
     .program-content h3 { font-size: 1.5rem; }
     .title-profundo  { font-size: 1.6rem; }

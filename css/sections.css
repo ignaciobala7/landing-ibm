@@ -206,6 +206,84 @@
     display: block;
 }
 
+/* Formación Continua — Collage de fotos */
+.program-collage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 420px;
+    overflow: hidden;
+}
+.collage-main {
+    position: relative;
+    overflow: hidden;
+}
+.collage-main img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+}
+.collage-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+}
+.collage-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.collage-side img:first-child {
+    object-position: center 40%;
+    border-bottom: 2px solid #fff;
+}
+.collage-side img:last-child {
+    object-position: center 60%;
+}
+
+/* Formación Continua — Staff row */
+.fc-staff-row {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0 28px 0;
+    flex-wrap: wrap;
+}
+.fc-staff-member {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f4f4f6;
+    border-radius: 50px;
+    padding: 6px 14px 6px 6px;
+    flex: 1;
+    min-width: 145px;
+}
+.fc-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    flex-shrink: 0;
+}
+.fc-staff-info strong {
+    display: block;
+    font-size: 0.82rem;
+    color: #222;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.fc-staff-info span {
+    font-size: 0.73rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
 /* FEATURES SECTION */
 .features {
     padding: 100px 0;
