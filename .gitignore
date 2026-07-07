@@ -1,5 +1,15 @@
+# Videos (demasiado pesados para el repo, excepto el comprimido)
 Recursos/videos/*.mp4
 Recursos/videos/*.avi
 Recursos/videos/*.mov
 !Recursos/videos/IBM_Comprimido.mp4
 !Recursos/Videos/IBM_Comprimido.mp4
+
+# Fotos originales sin optimizar (solo van las optimizadas en Recursos/opt/)
+fotos IBM/
+
+# Scripts y herramientas de desarrollo (no son parte del sitio)
+scripts/
+
+# Carpetas del sistema
+.claude/
