@@ -210,9 +210,6 @@
 .program-card--fc {
     grid-template-columns: 1fr;
 }
-.program-card--fc .program-content {
-    max-width: 720px;
-}
 
 /* Formación Continua — Strip de fotos sin recorte */
 .program-collage-strip {
@@ -245,7 +242,7 @@
 .fc-staff-row {
     display: flex;
     gap: 10px;
-    margin: 20px 0 28px 0;
+    margin: 12px 0 18px 0;
     flex-wrap: wrap;
 }
 .fc-staff-member {
