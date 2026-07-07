@@ -216,7 +216,7 @@
 .collage-img-main {
     flex: 1.2;
     object-fit: cover;
-    object-position: center 30%;
+    object-position: center center;
     min-width: 0;
     border-right: 3px solid #fff;
     display: block;
