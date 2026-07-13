@@ -670,35 +670,69 @@
     margin-top: 28px;
     padding: 0 48px 48px;
 }
-.program-video-embed video {
-    display: block;
+
+/* Premium iPhone Frame Mockup */
+.phone-frame {
+    position: relative;
     width: 100%;
-    max-width: 320px;
-    aspect-ratio: 9 / 16;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-width: 270px;
+    aspect-ratio: 9 / 19;
+    background: #000;
+    border: 11px solid #1a1a1a;
+    border-top-width: 13px;
+    border-bottom-width: 13px;
+    border-radius: 38px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25),
+                inset 0 0 2px 1px rgba(255, 255, 255, 0.15),
+                0 0 0 2px #0f0f0f;
+    overflow: hidden;
+    margin: 0 auto;
 }
-.program-video-embed iframe {
-    display: block;
+
+/* Dynamic Island / Notch */
+.phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 76px;
+    height: 15px;
+    background: #000;
+    border-radius: 20px;
+    z-index: 10;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Speaker Slot */
+.phone-frame::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    z-index: 11;
+}
+
+.phone-frame video {
     width: 100%;
-    max-width: 320px;
-    aspect-ratio: 9 / 16;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 24px;
+    background-color: #000;
+}
+
+.phone-frame iframe {
+    width: 100%;
+    height: 100%;
     border: none;
-    border-radius: 15px;
-}
-.video-coming-soon {
-    aspect-ratio: 9 / 16;
-    background: #1a1a1a;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255,255,255,0.35);
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-family: 'Inter', sans-serif;
+    display: block;
+    border-radius: 24px;
 }
 
 /* ============================================
@@ -706,47 +740,35 @@
    ============================================ */
 .testimonios-video-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
 }
 .testimonio-video-card {
-    background: #f8f9fa;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    background: #fff;
+    border-radius: 20px;
+    padding: 24px 20px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .testimonio-video-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-}
-.testimonio-video-card video {
-    width: 100%;
-    aspect-ratio: 9 / 16;
-    display: block;
-    object-fit: cover;
-}
-.testimonio-video-card iframe {
-    width: 100%;
-    aspect-ratio: 9 / 16;
-    border: none;
-    display: block;
-}
-.testimonio-video-card .video-coming-soon {
-    border-radius: 0;
-    aspect-ratio: 9 / 16;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 .testimonio-video-info {
-    padding: 16px 20px 20px;
+    padding: 16px 20px 0;
+    text-align: center;
 }
 .testimonio-video-info h4 {
     margin: 0 0 4px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--color-primary);
     font-weight: 700;
 }
 .testimonio-video-info span {
-    font-size: 0.83rem;
+    font-size: 0.85rem;
     color: #777;
 }
 
