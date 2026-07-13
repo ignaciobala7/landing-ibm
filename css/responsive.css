@@ -121,6 +121,15 @@
     .title-formacion { font-size: 1.7rem; }
     .fc-staff-row { gap: 8px; }
     .fc-staff-member { min-width: 130px; }
+
+    /* --- Testimonios --- */
+    .testimonios-video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .program-video-embed {
+        padding: 0 28px 36px;
+    }
 }
 
 /* ============================================
@@ -214,4 +223,7 @@
 @media (max-width: 600px) {
     .testimonios-video-grid { grid-template-columns: 1fr; gap: 20px; }
     .program-logo { max-width: 200px; }
+    .program-video-embed {
+        padding: 0 18px 28px;
+    }
 }

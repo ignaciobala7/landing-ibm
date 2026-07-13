@@ -664,19 +664,30 @@
 }
 
 .program-video-embed {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
     margin-top: 28px;
-    border-radius: 12px;
-    overflow: hidden;
+    padding: 0 48px 48px;
+}
+.program-video-embed video {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 9 / 16;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 .program-video-embed iframe {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    max-width: 320px;
+    aspect-ratio: 9 / 16;
     border: none;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 .video-coming-soon {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 9 / 16;
     background: #1a1a1a;
     border-radius: 12px;
     display: flex;
@@ -695,8 +706,8 @@
    ============================================ */
 .testimonios-video-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 .testimonio-video-card {
     background: #f8f9fa;
@@ -709,14 +720,21 @@
     transform: translateY(-4px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
+.testimonio-video-card video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    display: block;
+    object-fit: cover;
+}
 .testimonio-video-card iframe {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 9 / 16;
     border: none;
     display: block;
 }
 .testimonio-video-card .video-coming-soon {
     border-radius: 0;
+    aspect-ratio: 9 / 16;
 }
 .testimonio-video-info {
     padding: 16px 20px 20px;
