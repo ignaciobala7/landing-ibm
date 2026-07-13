@@ -122,13 +122,10 @@
     .fc-staff-row { gap: 8px; }
     .fc-staff-member { min-width: 130px; }
 
-    /* --- Testimonios --- */
-    .testimonios-video-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
     .program-video-embed {
-        padding: 0 28px 36px;
+        border-left: none;
+        border-top: 1px solid rgba(0,0,0,0.03);
+        padding: 40px 20px;
     }
 }
 
@@ -224,6 +221,8 @@
     .testimonios-video-grid { grid-template-columns: 1fr; gap: 20px; }
     .program-logo { max-width: 200px; }
     .program-video-embed {
-        padding: 0 18px 28px;
+        border-left: none;
+        border-top: 1px solid rgba(0,0,0,0.03);
+        padding: 30px 15px;
     }
 }
