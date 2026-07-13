@@ -185,7 +185,7 @@
 
     /* --- Familia --- */
     .split-image-collage { grid-template-columns: 1fr; gap: 14px; }
-    .split-image-collage .img-placeholder { height: 210px; border-radius: 14px; }
+    .split-image-collage .img-placeholder { aspect-ratio: 4 / 3; height: auto; min-height: 250px; border-radius: 14px; background-position: center center !important; }
 
     /* --- Residencia --- */
     .residencia-gallery { grid-template-columns: 1fr; }
