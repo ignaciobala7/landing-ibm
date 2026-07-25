@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS y Favicon -->
     <link rel="stylesheet" href="css/base.css?v=5">
     <link rel="stylesheet" href="css/layout.css?v=5">
@@ -148,10 +150,11 @@
                         </div>
                     </div>
                     <div class="program-video-embed">
-                        <div class="program-single-photo">
-                            <img src="Recursos/opt/tiempo_altar.jpg" alt="Tiempo de altar" loading="lazy" decoding="async">
-                        </div>
-                        <div class="program-photo-caption">
+                        <video controls preload="metadata" playsinline style="width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                            <source src="Recursos/Videos/alex_naiara.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <div class="program-photo-caption" style="margin-top: 15px;">
                             <p>“Tiempo de altar: donde la oración y la entrega se vuelven costumbre.”</p>
                         </div>
                     </div>
@@ -179,7 +182,7 @@
                         </div>
                     </div>
                     <div class="program-image">
-                        <img src="Recursos/opt/program_resi_4.jpg" alt="Nuestros mejores sábados - Modalidad Online" loading="lazy" decoding="async">
+                        <img src="Recursos/opt/tiempo_altar.jpg" alt="Tiempo de altar" loading="lazy" decoding="async">
                     </div>
                 </div>
 
@@ -273,12 +276,41 @@
                     <h2>Un poco de <span class="text-accent">Comunidad</span></h2>
                     <p>Una pequeña muestra de los distintos momentos que compartimos.</p>
                 </div>
-                <div class="community-gallery">
-                    <div class="community-img">
-                        <img src="Recursos/opt/_7412351.jpg" alt="Estudiantes compartiendo en el predio del IBM" loading="lazy" decoding="async">
+                <div class="community-layout">
+                    <!-- Características Izquierda -->
+                    <div class="community-features community-features-left">
+                        <div class="feature-item scroll-animate fade-in-left delay-1">
+                            <div class="feature-icon"><i class="fas fa-user-friends"></i></div>
+                            <h4>Amistades Reales</h4>
+                            <p>Vínculos genuinos que perduran para toda la vida.</p>
+                        </div>
+                        <div class="feature-item scroll-animate fade-in-left delay-2">
+                            <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                            <h4>Mismo Sentir</h4>
+                            <p>Unidos por una misma pasión y un mismo llamado.</p>
+                        </div>
                     </div>
-                    <div class="community-img">
-                        <img src="Recursos/opt/comunidad_profes.jpg" alt="Reunión de profesores IBM" loading="lazy" decoding="async">
+
+                    <!-- Video Centro -->
+                    <div class="community-video-container scroll-animate fade-in-up">
+                        <video controls preload="metadata" playsinline style="width: 100%; max-width: 350px; border-radius: 30px; box-shadow: 0 25px 60px rgba(0,0,0,0.2), 0 0 40px rgba(212,99,255,0.15); border: 4px solid #fff;">
+                            <source src="Recursos/Videos/IBM_Comprimido.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                    </div>
+
+                    <!-- Características Derecha -->
+                    <div class="community-features community-features-right">
+                        <div class="feature-item scroll-animate fade-in-right delay-1">
+                            <div class="feature-icon"><i class="fas fa-mug-hot"></i></div>
+                            <h4>Como en Casa</h4>
+                            <p>Un ambiente familiar de contención y crecimiento.</p>
+                        </div>
+                        <div class="feature-item scroll-animate fade-in-right delay-2">
+                            <div class="feature-icon"><i class="fas fa-seedling"></i></div>
+                            <h4>Crecimiento Juntos</h4>
+                            <p>Nos acompañamos y oramos los unos por los otros.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -316,18 +348,7 @@
                             <span>Alumni IBM</span>
                         </div>
                     </div>
-                    <div class="testimonio-video-card">
-                        <div class="video-card-frame">
-                            <video controls preload="metadata" playsinline>
-                                <source src="Recursos/Videos/alex_naiara.mp4" type="video/mp4">
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
-                        </div>
-                        <div class="testimonio-video-info">
-                            <h4>Naiara y Alex</h4>
-                            <span>Alumni IBM</span>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -339,7 +360,8 @@
                 <p>Escríbenos para recibir información sobre inscripciones, aranceles y el proceso de admisión para el Plan Residencial o Modalidad Virtual.</p>
                 <div class="contact-actions">
                     <a href="https://wa.me/5493518115500?text=%C2%A1Hola%21%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20programas%20del%20Instituto%20B%C3%ADblico%20Mediterr%C3%A1neo." target="_blank" rel="noopener" class="btn btn-primary">Contactar por WhatsApp</a>
-                    <a href="mailto:info@institutoibm.com" class="btn btn-secondary">Enviar Email</a>
+                    <a href="mailto:info@ibm.org.ar" class="btn btn-secondary">Email: info@ibm.org.ar</a>
+                    <a href="mailto:administracion@ibm.org.ar" class="btn btn-secondary">Email: administracion@ibm.org.ar</a>
                 </div>
             </div>
         </section>

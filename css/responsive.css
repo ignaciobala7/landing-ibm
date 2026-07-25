@@ -221,6 +221,17 @@
     /* --- Comunidad --- */
     .community-gallery { grid-template-columns: 1fr 1fr; }
     .community-img { height: 260px; }
+    .community-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .community-features-left, .community-features-right {
+        text-align: center;
+        align-items: center;
+    }
+    .community-features {
+        gap: 20px;
+    }
 
     /* --- Contacto --- */
     .contact-actions { flex-direction: column; align-items: center; }
