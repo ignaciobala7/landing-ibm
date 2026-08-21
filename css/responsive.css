@@ -25,46 +25,48 @@
     .section-title { margin-bottom: 48px; }
     .section-title h2 { font-size: 2.2rem; }
 
-    /* --- Hero: ambos paneles al fondo, casona libre arriba --- */
+    /* --- Hero: contenido centrado sobre la franja bordó del banner --- */
     .hero {
         min-height: 100svh;
-        padding-top: 0;
-        align-items: flex-end;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        align-items: center;
     }
     .hero-overlay {
         background: linear-gradient(
             to bottom,
-            rgba(0,0,0,0)    0%,
-            rgba(0,0,0,0)    42%,
-            rgba(0,0,0,0.5)  65%,
-            rgba(0,0,0,0.82) 100%
+            rgba(58,14,12,0.65) 0%,
+            rgba(58,14,12,0.10) 26%,
+            rgba(58,14,12,0.00) 40%,
+            rgba(58,14,12,0.00) 60%,
+            rgba(58,14,12,0.10) 74%,
+            rgba(58,14,12,0.65) 100%
         );
     }
+    /* Angosto para dos columnas: apilamos y el filete pasa a ser horizontal */
     .hero-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding: 0 20px 48px;
-        gap: 12px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        gap: 20px;
     }
     .hero-left {
-        text-align: left;
-        max-width: 48%;
-        border-left: 3px solid var(--color-accent);
-        border-bottom: none;
-        padding-left: 12px;
-        padding-bottom: 0;
-        align-self: flex-end;
-        margin-bottom: 36px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        max-width: 100%;
+        border-right: none;
+        border-bottom: 2px solid rgba(242, 172, 69, 0.55);
+        padding-right: 0;
+        padding-bottom: 20px;
     }
     .hero-right {
-        text-align: right;
-        align-items: flex-end;
-        max-width: 48%;
-        border-right: 3px solid var(--color-accent);
-        padding-right: 12px;
+        text-align: center;
+        align-items: center;
+        max-width: 100%;
         gap: 16px;
-        align-self: flex-end;
     }
     .hero h1 { font-size: 1.9rem; letter-spacing: -0.5px; }
     .hero .hero-eyebrow { font-size: 0.72rem; letter-spacing: 2px; margin-bottom: 8px; }
@@ -152,7 +154,6 @@
     .hero-shield { width: 38px; }
     .hero-cta { padding: 9px 20px; font-size: 0.78rem; }
     .hero-actions { flex-direction: column; }
-    .hero-left { margin-bottom: 28px; }
 
     /* --- Tipografía general --- */
     .history-text-col h2 { font-size: 1.6rem; }
@@ -254,4 +255,29 @@
     /* --- Comunidad --- */
     .community-gallery { grid-template-columns: 1fr; gap: 14px; }
     .community-img { height: 240px; }
+}
+
+/* ============================================
+   HERO — Viewports bajos
+   El banner es apaisado (1920x850): cuanto menos alto el viewport,
+   más angosta queda la franja bordó. Compactamos el bloque para que
+   no se derrame sobre las tiras de fotos.
+   ============================================ */
+@media (max-height: 860px) {
+    .hero { padding-top: 90px; padding-bottom: 90px; }
+    .hero-shield { width: 62px; margin-bottom: 12px; }
+    .hero .hero-eyebrow { font-size: 0.8rem; margin-bottom: 8px; }
+    .hero h1 { font-size: clamp(2.6rem, 4.4vw, 4rem); }
+    .hero .hero-tagline { font-size: 1.22rem; }
+    .hero-right { gap: 20px; }
+    .hero-cta { padding: 11px 30px; font-size: 0.84rem; }
+}
+@media (max-height: 720px) {
+    .hero { padding-top: 70px; padding-bottom: 70px; }
+    .hero-shield { width: 48px; margin-bottom: 8px; }
+    .hero .hero-eyebrow { font-size: 0.7rem; letter-spacing: 3px; margin-bottom: 6px; }
+    .hero h1 { font-size: clamp(2.1rem, 3.6vw, 3.1rem); }
+    .hero .hero-tagline { font-size: 1.05rem; }
+    .hero-right { gap: 16px; padding-bottom: 4px; }
+    .hero-cta { padding: 9px 26px; font-size: 0.78rem; }
 }

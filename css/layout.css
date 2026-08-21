@@ -57,48 +57,56 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url('../Recursos/opt/DJI_20241211183234_0096_D_ADAM.jpg');
+    background-image: url('../Recursos/opt/hero_banner.png');
     background-size: cover;
     background-position: center;
+    background-color: var(--color-primary);
+    /* Padding simétrico: el header mide 100px, pero si solo compensamos
+       arriba el bloque centrado se corre hacia abajo y se sale de la franja. */
     padding-top: 100px;
+    padding-bottom: 100px;
 }
+/* El banner ya trae su franja bordó central como zona de lectura:
+   el overlay solo asienta las tiras de fotos de arriba y abajo. */
 .hero-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
-        to right,
-        rgba(0,0,0,0.88) 0%,
-        rgba(0,0,0,0.55) 22%,
-        rgba(0,0,0,0.05) 38%,
-        rgba(0,0,0,0.05) 62%,
-        rgba(0,0,0,0.55) 78%,
-        rgba(0,0,0,0.88) 100%
+        to bottom,
+        rgba(58,14,12,0.60) 0%,
+        rgba(58,14,12,0.15) 24%,
+        rgba(58,14,12,0.00) 38%,
+        rgba(58,14,12,0.00) 62%,
+        rgba(58,14,12,0.15) 76%,
+        rgba(58,14,12,0.60) 100%
     );
     z-index: 1;
 }
+/* Composición editorial: lockup anclado a la izquierda de la franja y
+   frase + CTA a la derecha, ambos apoyados sobre la misma línea de base.
+   El peso tipográfico del título es lo que sostiene el ancho. */
 .hero-content {
     position: relative;
     z-index: 2;
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    gap: 60px;
 }
 .hero-left {
     text-align: left;
-    max-width: 380px;
-    border-left: 4px solid var(--color-accent);
-    padding-left: 26px;
+    display: block;
 }
 .hero-right {
     text-align: right;
-    max-width: 320px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 24px;
-    border-right: 4px solid var(--color-accent);
-    padding-right: 26px;
+    gap: 26px;
+    padding-bottom: 10px;
 }
 .badge {
     display: inline-block;
@@ -114,52 +122,51 @@
     text-transform: uppercase;
     box-shadow: 0 8px 25px rgba(242, 172, 69, 0.4); /* Sombra dorada que lo hace flotar */
 }
+/* Sobre la franja bordó plana no hacen falta las sombras densas que
+   pedía la foto de fondo: sobre color liso solo emborronan el texto. */
 .hero h1 {
     font-family: var(--font-heading);
-    font-size: clamp(2.8rem, 4.5vw, 4rem);
-    line-height: 1.05;
-    letter-spacing: -1px;
+    font-size: clamp(3rem, 5.2vw, 5rem);
+    line-height: 0.98;
+    letter-spacing: -2px;
     margin-bottom: 0;
     color: #ffffff;
     font-weight: 800;
-    text-shadow:
-        0 2px 4px rgba(0,0,0,0.9),
-        0 4px 20px rgba(0,0,0,0.7),
-        0 8px 40px rgba(0,0,0,0.5);
+    text-shadow: none;
 }
 .hero .text-accent {
-    -webkit-text-stroke: 2.5px var(--color-accent);
-    color: transparent;
-    display: block;
+    -webkit-text-stroke: 0;
+    color: var(--color-accent);
+    display: inline;
 }
 .hero p {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.88);
     line-height: 1.6;
-    text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+    text-shadow: none;
 }
 .hero-shield {
-    width: 58px;
+    width: 76px;
     height: auto;
     display: block;
-    margin-bottom: 16px;
-    filter: drop-shadow(0px 3px 10px rgba(0,0,0,0.6));
+    margin-bottom: 18px;
+    filter: none;
 }
 .hero .hero-eyebrow {
-    font-size: 0.88rem;
+    font-size: 0.86rem;
     font-weight: 800;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--color-accent);
-    margin-bottom: 14px;
-    text-shadow: 0 1px 8px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8);
+    margin-bottom: 10px;
+    text-shadow: none;
 }
 .hero .hero-tagline {
-    font-size: 1.45rem;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 600;
     color: #ffffff;
     font-style: normal;
-    line-height: 1.55;
-    text-shadow: 0 2px 4px rgba(0,0,0,1), 0 4px 20px rgba(0,0,0,0.9);
+    line-height: 1.45;
+    text-shadow: none;
     margin: 0;
 }
 .hero-cta {
