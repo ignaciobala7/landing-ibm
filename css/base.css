@@ -14,11 +14,15 @@
     --font-body: 'Inter', sans-serif;
 
     --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* Alto del header fijo. Lo usan el hero (para arrancar debajo) y el
+       scroll-padding de los anclas: si cambia, cambia en un solo lugar. */
+    --header-h: 100px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html {
-    scroll-padding-top: 100px;
+    scroll-padding-top: var(--header-h);
 }
 body {
     font-family: var(--font-body);

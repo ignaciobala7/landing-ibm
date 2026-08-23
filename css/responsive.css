@@ -25,13 +25,19 @@
     .section-title { margin-bottom: 48px; }
     .section-title h2 { font-size: 2.2rem; }
 
-    /* --- Hero: contenido centrado sobre la franja bordó del banner --- */
+    /* --- Hero: contenido centrado sobre la franja bordó del banner ---
+       En pantalla angosta el banner se recorta por los costados (las
+       estrellas quedan fuera de cuadro), así que soltamos la proporción
+       fija y volvemos a un hero de alto de pantalla, descontando el header
+       para que la tira de fotos superior no quede tapada. */
     .hero {
-        min-height: 100svh;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        aspect-ratio: auto;
+        min-height: calc(100svh - var(--header-h));
+        padding-top: 40px;
+        padding-bottom: 40px;
         align-items: center;
     }
+    .hero > .container { padding: 0 20px; }
     .hero-overlay {
         background: linear-gradient(
             to bottom,
@@ -48,7 +54,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 20px;
         gap: 20px;
     }
     .hero-left {
@@ -259,21 +264,13 @@
 
 /* ============================================
    HERO — Viewports bajos
-   El banner es apaisado (1920x850): cuanto menos alto el viewport,
-   más angosta queda la franja bordó. Compactamos el bloque para que
-   no se derrame sobre las tiras de fotos.
+   Solo aplica en anchos chicos, que es donde el hero sigue atado al alto
+   de la pantalla. En escritorio el alto lo fija la proporción del banner,
+   así que la franja bordó ya no se angosta al bajar el viewport y no hay
+   nada que compactar.
    ============================================ */
-@media (max-height: 860px) {
-    .hero { padding-top: 90px; padding-bottom: 90px; }
-    .hero-shield { width: 62px; margin-bottom: 12px; }
-    .hero .hero-eyebrow { font-size: 0.8rem; margin-bottom: 8px; }
-    .hero h1 { font-size: clamp(2.6rem, 4.4vw, 4rem); }
-    .hero .hero-tagline { font-size: 1.22rem; }
-    .hero-right { gap: 20px; }
-    .hero-cta { padding: 11px 30px; font-size: 0.84rem; }
-}
-@media (max-height: 720px) {
-    .hero { padding-top: 70px; padding-bottom: 70px; }
+@media (max-width: 900px) and (max-height: 720px) {
+    .hero { padding-top: 24px; padding-bottom: 24px; }
     .hero-shield { width: 48px; margin-bottom: 8px; }
     .hero .hero-eyebrow { font-size: 0.7rem; letter-spacing: 3px; margin-bottom: 6px; }
     .hero h1 { font-size: clamp(2.1rem, 3.6vw, 3.1rem); }
