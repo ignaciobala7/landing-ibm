@@ -49,7 +49,7 @@
             rgba(58,14,12,0.65) 100%
         );
     }
-    /* Angosto para dos columnas: apilamos y el filete pasa a ser horizontal */
+    /* Angosto para dos columnas: apilamos lockup y CTA */
     .hero-content {
         flex-direction: column;
         justify-content: center;
@@ -63,9 +63,7 @@
         align-items: center;
         max-width: 100%;
         border-right: none;
-        border-bottom: 2px solid rgba(242, 172, 69, 0.55);
         padding-right: 0;
-        padding-bottom: 20px;
     }
     .hero-right {
         text-align: center;
@@ -73,10 +71,7 @@
         max-width: 100%;
         gap: 16px;
     }
-    .hero h1 { font-size: 1.9rem; letter-spacing: -0.5px; }
-    .hero .hero-eyebrow { font-size: 0.72rem; letter-spacing: 2px; margin-bottom: 8px; }
-    .hero .hero-tagline { font-size: 1.1rem; }
-    .hero-shield { width: 44px; margin-bottom: 10px; }
+    .hero-lockup { width: min(100%, 440px); }
     .hero-cta { padding: 10px 26px; font-size: 0.85rem; letter-spacing: 1px; }
 
     /* --- Nav mobile --- */
@@ -153,10 +148,6 @@
     .logo-img { height: 60px; }
 
     /* --- Hero --- */
-    .hero h1 { font-size: 1.55rem; }
-    .hero .hero-eyebrow { font-size: 0.62rem; letter-spacing: 1.5px; }
-    .hero .hero-tagline { font-size: 0.92rem; line-height: 1.45; }
-    .hero-shield { width: 38px; }
     .hero-cta { padding: 9px 20px; font-size: 0.78rem; }
     .hero-actions { flex-direction: column; }
 
@@ -271,10 +262,7 @@
    ============================================ */
 @media (max-width: 900px) and (max-height: 720px) {
     .hero { padding-top: 24px; padding-bottom: 24px; }
-    .hero-shield { width: 48px; margin-bottom: 8px; }
-    .hero .hero-eyebrow { font-size: 0.7rem; letter-spacing: 3px; margin-bottom: 6px; }
-    .hero h1 { font-size: clamp(2.1rem, 3.6vw, 3.1rem); }
-    .hero .hero-tagline { font-size: 1.05rem; }
+    .hero-lockup { width: min(100%, 360px); }
     .hero-right { gap: 16px; padding-bottom: 4px; }
     .hero-cta { padding: 9px 26px; font-size: 0.78rem; }
 }

@@ -166,30 +166,14 @@
     line-height: 1.6;
     text-shadow: none;
 }
-.hero-shield {
-    width: clamp(56px, 5.2vw, 100px);
-    height: auto;
+/* Lockup oficial (nombre + "una familia" + frase) como imagen. La franja
+   bordó ocupa ~22vw de alto; a 36vw de ancho el PNG (1662x861) mide ~18.6vw
+   y entra con aire arriba y abajo. */
+.hero-lockup {
     display: block;
-    margin-bottom: clamp(12px, 1.5vw, 26px);
-    filter: none;
-}
-.hero .hero-eyebrow {
-    font-size: clamp(0.72rem, 0.95vw, 1.05rem);
-    font-weight: 800;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    margin-bottom: clamp(8px, 0.8vw, 14px);
-    text-shadow: none;
-}
-.hero .hero-tagline {
-    font-size: clamp(1.05rem, 1.65vw, 1.95rem);
-    font-weight: 600;
-    color: #ffffff;
-    font-style: normal;
-    line-height: 1.4;
-    text-shadow: none;
-    margin: 0;
+    width: 36vw;
+    max-width: 100%;
+    height: auto;
 }
 .hero-cta {
     background: transparent;
