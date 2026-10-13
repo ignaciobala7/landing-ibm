@@ -4,6 +4,11 @@
     --color-primary: #5A1614; /* Bordó */
     --color-primary-dark: #3A0E0C; /* Bordó Oscuro para Hover */
     --color-accent: #F2AC45;  /* Dorado/Naranja */
+    /* Dorado para texto sobre fondo claro: el #F2AC45 sobre blanco queda
+       lavado (contraste ~1.9:1). Este tono mantiene el dorado y se lee. */
+    --color-accent-deep: #B8741C;
+    /* Filete dorado fino para bordes de tarjetas, header y marcos */
+    --gold-hairline: rgba(242, 172, 69, 0.45);
     --color-bg-light: #FFFFFF; /* Blanco Puro */
     --color-bg-alt: #E9E8E7;   /* Gris Claro */
 
@@ -38,7 +43,27 @@ body {
 }
 
 .text-accent {
-    color: var(--color-accent);
+    color: var(--color-accent-deep);
+}
+
+/* Filete dorado bajo los títulos de sección: corto, con degradé, firma
+   visual que se repite en toda la página. */
+.section-title h2::after,
+.history-text-col h2::after,
+.split-text h2::after,
+.contact-section h2::after {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 3px;
+    margin-top: 18px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--color-accent-deep), var(--color-accent));
+}
+.section-title h2::after,
+.contact-section h2::after {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* SECTION TITLES */

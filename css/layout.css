@@ -8,6 +8,7 @@
     background: rgba(255, 255, 255, 0.98); /* Fondo blanco puro */
     /* Eliminado el backdrop-filter para mejorar el rendimiento del scroll drásticamente */
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-bottom: 1px solid var(--gold-hairline);
     transition: all var(--transition);
 }
 
@@ -251,6 +252,7 @@
     padding: 60px 0;
     background-color: var(--color-primary);
     color: var(--color-text-light);
+    border-top: 4px solid var(--color-accent);
 }
 
 /* ============================================
