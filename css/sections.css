@@ -1082,30 +1082,32 @@
     flex: 0 0 auto;
 }
 
-/* Podcast — miniatura clickeable que lleva al episodio en YouTube */
-.podcast-card {
-    display: block;
-    width: 100%;
-    max-width: 500px;
-    margin-top: 10px;
-    background: #fff;
-    border: 1px solid var(--gold-hairline);
-    border-radius: 14px;
-    overflow: hidden;
+/* Podcast — franja destacada a todo el ancho de la tarjeta "En lo
+   Profundo": miniatura del episodio a la izquierda, invitación y botón a la
+   derecha, sobre bordó para que se despegue del resto de la tarjeta. */
+.podcast-banner {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 40px;
+    padding: 36px 48px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-top: 3px solid var(--color-accent);
     text-decoration: none;
-    box-shadow: 0 8px 24px rgba(90, 22, 20, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.podcast-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 32px rgba(90, 22, 20, 0.16);
+    color: #fff;
 }
 .podcast-thumb {
     position: relative;
     display: block;
     aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    overflow: hidden;
     background: #eee;
+    box-shadow: 0 0 0 1px rgba(242,172,69,0.6), 0 18px 40px rgba(0,0,0,0.35);
+    transition: transform 0.3s ease;
 }
+.podcast-banner:hover .podcast-thumb { transform: translateY(-4px); }
 .podcast-thumb img {
     width: 100%;
     height: 100%;
@@ -1118,41 +1120,75 @@
     position: absolute;
     right: 14px;
     bottom: 14px;
-    width: 52px;
-    height: 52px;
+    width: 54px;
+    height: 54px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: var(--color-primary);
+    background: #E62117;
     color: #fff;
     font-size: 1.1rem;
     padding-left: 3px; /* centra ópticamente el triángulo */
-    box-shadow: 0 0 0 4px rgba(255,255,255,0.85), 0 8px 20px rgba(0,0,0,0.25);
-    transition: background var(--transition), transform var(--transition);
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.9), 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform var(--transition);
 }
-.podcast-card:hover .podcast-play {
-    background: #E62117; /* rojo YouTube al pasar el mouse */
-    transform: scale(1.08);
-}
+.podcast-banner:hover .podcast-play { transform: scale(1.1); }
 .podcast-info {
-    display: block;
-    padding: 14px 18px 16px;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
 }
 .podcast-kicker {
-    display: block;
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--color-accent-deep);
-    margin-bottom: 4px;
+    color: var(--color-accent);
 }
-.podcast-kicker i { color: #E62117; margin-right: 4px; }
-.podcast-info strong {
-    display: block;
+.podcast-kicker i { margin-right: 6px; }
+.podcast-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: #fff;
+}
+.podcast-sub {
     font-size: 1.05rem;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.85);
+}
+.podcast-sub strong { color: #fff; }
+.podcast-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+    padding: 13px 28px;
+    border-radius: 50px;
+    background: var(--color-accent);
     color: var(--color-primary);
-    line-height: 1.35;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    transition: background var(--transition), box-shadow var(--transition), gap var(--transition);
+}
+.podcast-banner:hover .podcast-btn {
+    background: #FFBD59;
+    box-shadow: 0 10px 25px rgba(242, 172, 69, 0.4);
+    gap: 14px;
+}
+
+@media (max-width: 900px) {
+    .podcast-banner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 32px 24px;
+    }
+}
+@media (max-width: 600px) {
+    .podcast-banner { padding: 26px 18px; }
+    .podcast-info { align-items: stretch; }
+    .podcast-btn { justify-content: center; }
 }
